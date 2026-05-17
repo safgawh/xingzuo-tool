@@ -59,8 +59,15 @@
       line-height: 1.8;
     }
 
-    .counter {
+    .top-meta {
       flex: 0 0 auto;
+      display: grid;
+      gap: 8px;
+      justify-items: end;
+    }
+
+    .counter,
+    .version-badge {
       color: var(--accent-2);
       border: 1px solid rgba(31, 111, 104, 0.25);
       padding: 10px 13px;
@@ -68,6 +75,12 @@
       background: rgba(255, 250, 243, 0.75);
       font-size: 14px;
       font-weight: 700;
+    }
+
+    .version-badge {
+      color: var(--accent);
+      border-color: rgba(179, 72, 53, 0.22);
+      background: rgba(179, 72, 53, 0.08);
     }
 
     .panel {
@@ -333,7 +346,10 @@
       h2 { font-size: 25px; }
       .report { padding: 22px; }
       button { width: 100%; }
-      .counter { width: fit-content; }
+      .top-meta {
+        justify-items: start;
+      }
+      .counter, .version-badge { width: fit-content; }
     }
   </style>
 </head>
@@ -344,7 +360,10 @@
         <h1>十二星座搭配查询</h1>
         <p class="subtitle">分别输入女方星座和男方星座，查看你预设好的长文案报告。</p>
       </div>
-      <div class="counter" id="counter">已收录 1 / 144</div>
+      <div class="top-meta">
+        <div class="counter" id="counter">已收录 1 / 144</div>
+        <div class="version-badge">版本 v1</div>
+      </div>
     </div>
 
     <section class="panel">
